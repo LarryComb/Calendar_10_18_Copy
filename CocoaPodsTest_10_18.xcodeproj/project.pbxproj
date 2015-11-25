@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		465F9A821BE5A2C5007BFA92 /* Holiday.json in Resources */ = {isa = PBXBuildFile; fileRef = 465F9A811BE5A2C5007BFA92 /* Holiday.json */; };
+		4662742B1C04E92F00FE789B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4662742A1C04E92F00FE789B /* AudioToolbox.framework */; };
+		4662742D1C04E9A000FE789B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4662742C1C04E9A000FE789B /* CFNetwork.framework */; };
+		4662742F1C04E9AE00FE789B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4662742E1C04E9AE00FE789B /* CoreGraphics.framework */; };
+		466274311C04E9CD00FE789B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 466274301C04E9CD00FE789B /* CoreLocation.framework */; };
+		466274331C04E9E400FE789B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 466274321C04E9E400FE789B /* QuartzCore.framework */; };
+		466274351C04E9F300FE789B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 466274341C04E9F300FE789B /* Security.framework */; };
+		466274371C04EA1700FE789B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 466274361C04EA1700FE789B /* StoreKit.framework */; };
+		466274391C04EA3300FE789B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 466274381C04EA3300FE789B /* SystemConfiguration.framework */; };
+		4662743B1C04EA6400FE789B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4662743A1C04EA6400FE789B /* libz.tbd */; };
+		4662743D1C04EA8300FE789B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4662743C1C04EA8300FE789B /* libsqlite3.tbd */; };
+		466274401C04EC9300FE789B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4662743E1C04EC9300FE789B /* Bolts.framework */; };
+		466274411C04EC9300FE789B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4662743F1C04EC9300FE789B /* Parse.framework */; };
+		466274431C052DE300FE789B /* TableLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466274421C052DE300FE789B /* TableLogInViewController.swift */; };
 		A008CC281BD4712200DFFFFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A008CC271BD4712200DFFFFA /* AppDelegate.swift */; };
 		A008CC2A1BD4712200DFFFFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A008CC291BD4712200DFFFFA /* ViewController.swift */; };
 		A008CC2D1BD4712200DFFFFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A008CC2B1BD4712200DFFFFA /* Main.storyboard */; };
@@ -38,6 +51,19 @@
 /* Begin PBXFileReference section */
 		438B1DF276902B24B7A7E8C5 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		465F9A811BE5A2C5007BFA92 /* Holiday.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Holiday.json; sourceTree = "<group>"; };
+		4662742A1C04E92F00FE789B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4662742C1C04E9A000FE789B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		4662742E1C04E9AE00FE789B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		466274301C04E9CD00FE789B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		466274321C04E9E400FE789B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		466274341C04E9F300FE789B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		466274361C04EA1700FE789B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		466274381C04EA3300FE789B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4662743A1C04EA6400FE789B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		4662743C1C04EA8300FE789B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		4662743E1C04EC9300FE789B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = CocoaPodsTest_10_18/Bolts.framework; sourceTree = "<group>"; };
+		4662743F1C04EC9300FE789B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = CocoaPodsTest_10_18/Parse.framework; sourceTree = "<group>"; };
+		466274421C052DE300FE789B /* TableLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableLogInViewController.swift; sourceTree = "<group>"; };
 		705BB0A994595C05725715CF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A008CC241BD4712200DFFFFA /* CocoaPodsTest_10_18.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaPodsTest_10_18.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A008CC271BD4712200DFFFFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +86,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4662743D1C04EA8300FE789B /* libsqlite3.tbd in Frameworks */,
+				4662743B1C04EA6400FE789B /* libz.tbd in Frameworks */,
+				466274391C04EA3300FE789B /* SystemConfiguration.framework in Frameworks */,
+				466274401C04EC9300FE789B /* Bolts.framework in Frameworks */,
+				466274371C04EA1700FE789B /* StoreKit.framework in Frameworks */,
+				466274351C04E9F300FE789B /* Security.framework in Frameworks */,
+				466274411C04EC9300FE789B /* Parse.framework in Frameworks */,
+				466274331C04E9E400FE789B /* QuartzCore.framework in Frameworks */,
+				466274311C04E9CD00FE789B /* CoreLocation.framework in Frameworks */,
+				4662742F1C04E9AE00FE789B /* CoreGraphics.framework in Frameworks */,
+				4662742D1C04E9A000FE789B /* CFNetwork.framework in Frameworks */,
+				4662742B1C04E92F00FE789B /* AudioToolbox.framework in Frameworks */,
 				DB953A2CB1B8A666B8D2A512 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +131,18 @@
 		3C080C23DC5AE68F9B37C6F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4662743E1C04EC9300FE789B /* Bolts.framework */,
+				4662743F1C04EC9300FE789B /* Parse.framework */,
+				4662743C1C04EA8300FE789B /* libsqlite3.tbd */,
+				4662743A1C04EA6400FE789B /* libz.tbd */,
+				466274381C04EA3300FE789B /* SystemConfiguration.framework */,
+				466274361C04EA1700FE789B /* StoreKit.framework */,
+				466274341C04E9F300FE789B /* Security.framework */,
+				466274321C04E9E400FE789B /* QuartzCore.framework */,
+				466274301C04E9CD00FE789B /* CoreLocation.framework */,
+				4662742E1C04E9AE00FE789B /* CoreGraphics.framework */,
+				4662742C1C04E9A000FE789B /* CFNetwork.framework */,
+				4662742A1C04E92F00FE789B /* AudioToolbox.framework */,
 				438B1DF276902B24B7A7E8C5 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -126,6 +176,7 @@
 				A008CC271BD4712200DFFFFA /* AppDelegate.swift */,
 				A008CC291BD4712200DFFFFA /* ViewController.swift */,
 				A008CC2B1BD4712200DFFFFA /* Main.storyboard */,
+				466274421C052DE300FE789B /* TableLogInViewController.swift */,
 				465F9A811BE5A2C5007BFA92 /* Holiday.json */,
 				A008CC2E1BD4712200DFFFFA /* Assets.xcassets */,
 				A008CC301BD4712200DFFFFA /* LaunchScreen.storyboard */,
@@ -337,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				466274431C052DE300FE789B /* TableLogInViewController.swift in Sources */,
 				A008CC2A1BD4712200DFFFFA /* ViewController.swift in Sources */,
 				A008CC281BD4712200DFFFFA /* AppDelegate.swift in Sources */,
 			);
@@ -479,6 +531,10 @@
 			baseConfigurationReference = 705BB0A994595C05725715CF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CocoaPodsTest_10_18",
+				);
 				INFOPLIST_FILE = CocoaPodsTest_10_18/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.beyondconfidentlabs.CocoaPodsTest-10-18";
@@ -491,6 +547,10 @@
 			baseConfigurationReference = D94D6CD473C4781FFD0CC4D1 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CocoaPodsTest_10_18",
+				);
 				INFOPLIST_FILE = CocoaPodsTest_10_18/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.beyondconfidentlabs.CocoaPodsTest-10-18";

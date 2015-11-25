@@ -8,6 +8,7 @@
 
 import UIKit
 import CVCalendar
+import Parse
 
 
 class ViewController: UIViewController {
@@ -27,7 +28,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBarHidden = true
+        
         monthLabel.text = CVDate(date: NSDate()).globalDescription
+        //let testObject = PFObject(className: "TestObject")
+        //testObject["foo"] = "barr"
+        //testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+        // print("Object has been saved.")
         
             
     }

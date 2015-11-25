@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        Parse.setApplicationId("n7QoeH1MjGKIuzZFp4jWoffEMXtoVvbyuMuBy8WZ",
+            clientKey: "OZ4w1pAO1eFW4u3pn1vNhzydS6av2qZylDHbZddg")
+
         
         // Will implement code here to see if user is logged in connected to Parse. 
         
