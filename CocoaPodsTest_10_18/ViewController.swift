@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var menuView: CVCalendarMenuView!
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var daysOutSwitch: UISwitch!
+    @IBOutlet weak var Email: UITextField!
+    @IBOutlet weak var Password: UITextField!
+    
     
     var shouldShowDaysOut = true
     var animationFinished = true
@@ -47,6 +50,16 @@ class ViewController: UIViewController {
         calendarView.commitCalendarViewUpdate()
         menuView.commitMenuViewUpdate()
         menuView.delegate = self
+    }
+    
+    @IBAction func SignUp(sender: AnyObject){
+        print("Did sign up")
+    
+    }
+    
+    @IBAction func SignIn(sender: AnyObject){
+        print("Did sign in")
+    
     }
 }
 
