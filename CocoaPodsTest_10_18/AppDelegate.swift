@@ -18,14 +18,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        Parse.setApplicationId("n7QoeH1MjGKIuzZFp4jWoffEMXtoVvbyuMuBy8WZ",
-            clientKey: "OZ4w1pAO1eFW4u3pn1vNhzydS6av2qZylDHbZddg")
-
+        self.setupParse()
         
+       // var navigationController = UINavigationController()
+       // var startUserView = StartUserView(nibName: "StartUserView", bundle: nil)
+        
+        
+        if PFUser.currentUser() == nil
+        {
+            //TODO: Present the main UI with log in
+            print("User does not Exist!")
+         }
+        else
+        {
+        
+            //TODO: Present Tableview unobstructed by login view
+            print("we have a user")
+        }
+
+    
         // Will implement code here to see if user is logged in connected to Parse. 
         
         
         return true
+    }
+    
+    func setupParse()
+    {
+        Parse.setApplicationId("n7QoeH1MjGKIuzZFp4jWoffEMXtoVvbyuMuBy8WZ",
+            clientKey: "OZ4w1pAO1eFW4u3pn1vNhzydS6av2qZylDHbZddg")
+    
     }
 
     func applicationWillResignActive(application: UIApplication) {
