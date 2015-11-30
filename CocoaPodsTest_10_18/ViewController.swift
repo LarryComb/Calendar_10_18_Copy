@@ -75,8 +75,8 @@ class ViewController: UIViewController {
 extension ViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
     
     
-    func SignUp(){
-    var user = PFUser()
+  func SignUp(){
+    let user = PFUser()
     user.username = UserName.text
     user.password = Password.text
     user.email = Email.text
@@ -84,12 +84,39 @@ extension ViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
     
     user.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
         if error == nil {
-            // Hooray! Let them use the app now.
+            // TODO Hooray! Let them use the app now by Hiding StartUserView 
+            
         } else {
-            // Examine the error object and inform the user.
+            // Examine the error object and inform the user.Give notification that username/password incorrect
         }
     }
     
+}
+
+    
+    
+    func LogIn(){
+        let user = PFUser()
+        user.username = UserName.text
+        user.password = Password.text
+     
+        PFUser.logInWithUsernameInBackground(UserName.text!, password: Password.text!, block: {
+            (User : PFUser?, Error : NSError?) -> Void in
+            
+            if Error == nil{
+                // Hide StartUserView
+                //StartUserView.hidden = true{
+                self.view.viewWithTag(view1)?.hidden = true
+                
+            
+            }
+            else{
+                 //TODO Give notification that username/password incorrect
+            }
+        
+        })
+        
+       
     }
 
     
