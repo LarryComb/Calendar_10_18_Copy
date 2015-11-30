@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         {
             //TODO: Present the main UI with log in
             print("User does not Exist!")
+            
+          
          }
         else
         {

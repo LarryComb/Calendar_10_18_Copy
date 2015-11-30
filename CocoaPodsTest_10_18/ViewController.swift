@@ -21,10 +21,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var daysOutSwitch: UISwitch!
     @IBOutlet weak var Email: UITextField!
     @IBOutlet weak var Password: UITextField!
+    @IBOutlet weak var UserName: UITextField!
     
     
     var shouldShowDaysOut = true
     var animationFinished = true
+    
     
     // MARK: - Life cycle
     
@@ -42,6 +44,8 @@ class ViewController: UIViewController {
             
     }
     
+
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -53,7 +57,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func SignUp(sender: AnyObject){
-        print("Did sign up")
+        
+        SignUp()
     
     }
     
@@ -63,9 +68,32 @@ class ViewController: UIViewController {
     }
 }
 
+
+
 // MARK: - CVCalendarViewDelegate & CVCalendarMenuViewDelegate
 
 extension ViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
+    
+    
+    func SignUp(){
+    var user = PFUser()
+    user.username = UserName.text
+    user.password = Password.text
+    user.email = Email.text
+    
+    
+    user.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+        if error == nil {
+            // Hooray! Let them use the app now.
+        } else {
+            // Examine the error object and inform the user.
+        }
+    }
+    
+    }
+
+    
+    
     
     /// Required method to implement!
     func presentationMode() -> CalendarMode {
