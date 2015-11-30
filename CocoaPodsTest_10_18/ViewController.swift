@@ -106,9 +106,8 @@ extension ViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
             if Error == nil{
                 // Hide StartUserView
                 //StartUserView.hidden = true{
-                self.view.viewWithTag(view1)?.hidden = true
+                self.view.viewWithTag(1)?.hidden = true
                 
-            
             }
             else{
                  //TODO Give notification that username/password incorrect
