@@ -24,6 +24,33 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var UserName: UITextField!
     
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
+    {
+        self.view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+    }
+    
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool
+    {
+        if(textField == self.UserName)
+        {
+            self.UserName?.resignFirstResponder()
+            self.Password?.becomeFirstResponder()
+        }
+        else if (textField == self.Password)
+        {
+            self.Password?.resignFirstResponder()
+            self.Email?.becomeFirstResponder()
+        }
+        else if (textField == self.Email)
+        {
+            self.Email?.resignFirstResponder()
+        }
+         return true
+    }
+    
     var shouldShowDaysOut = true
     var animationFinished = true
     
@@ -152,6 +179,9 @@ extension ViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
             }
             else{
                  //TODO Give notification that username/password incorrect
+                let alertController = UIAlertController(title: "Uh Oh", message: "Looks Like Something Went Wrong and We Couldn't Sign you In, Please Try Again", preferredStyle: .Alert)
+                alertController.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
+                self.presentViewController(alertController, animated: true, completion: nil)
             }
         
         })
