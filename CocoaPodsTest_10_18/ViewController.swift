@@ -63,7 +63,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func SignIn(sender: AnyObject){
-        print("Did sign in")
+        
+        SignIn()
     
     }
 }
@@ -95,7 +96,7 @@ extension ViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
 
     
     
-    func LogIn(){
+    func SignIn(){
         let user = PFUser()
         user.username = UserName.text
         user.password = Password.text
