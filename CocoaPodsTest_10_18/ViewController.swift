@@ -11,7 +11,7 @@ import CVCalendar
 import Parse
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     
     //Mark Properties
@@ -40,11 +40,8 @@ class ViewController: UIViewController {
         //testObject["foo"] = "barr"
         //testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
         // print("Object has been saved.")
-        
             
     }
-    
-
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -55,6 +52,45 @@ class ViewController: UIViewController {
         menuView.commitMenuViewUpdate()
         menuView.delegate = self
     }
+    
+    // TODO Can not figure out where to put this code
+    /*
+    func textFieldShouldReturn(textField: UITextField) -> Bool
+    {
+        if (textField == self.UserName)
+        {
+            self.UserName?.resignFirstResponder()
+            self.Password?.becomeFirstResponder()
+        }
+        else if (textField == self.Password)
+        {
+            self.Password?.resignFirstResponder()
+            
+            self.authenticate()
+        }
+        
+        retun; true
+    }
+}
+
+
+func authenticate()
+{
+    var email = self.email?.text
+    var password = self.password?.text
+    
+    if (email?.isEmpty == true || password?.isEmpty == true)// is this an email address
+    {
+        //alert the user 
+        return
+    }
+    else
+    {
+        //otherwise authenticate
+    }
+}
+    
+*/
     
     @IBAction func SignUp(sender: AnyObject){
         
@@ -67,7 +103,10 @@ class ViewController: UIViewController {
         SignIn()
     
     }
+    
 }
+
+
 
 
 
@@ -85,7 +124,8 @@ extension ViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
     
     user.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
         if error == nil {
-            // TODO Hooray! Let them use the app now by Hiding StartUserView 
+            // Let them use the app now by Hiding StartUserView
+            self.view.viewWithTag(1)?.hidden = true
             
         } else {
             // Examine the error object and inform the user.Give notification that username/password incorrect
@@ -94,8 +134,9 @@ extension ViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
     
 }
 
-    
-    
+   
+
+
     func SignIn(){
         let user = PFUser()
         user.username = UserName.text
@@ -106,7 +147,6 @@ extension ViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
             
             if Error == nil{
                 // Hide StartUserView
-                //StartUserView.hidden = true{
                 self.view.viewWithTag(1)?.hidden = true
                 
             }
@@ -239,6 +279,7 @@ extension ViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
     
     
     
+    
     //        Line 161 read: NSString *dateString = [NSString stringWithFormat:@"%i-%i", start.month, start.day];
     //        This is from Objective-c file to call Holiday.json file
     
@@ -281,6 +322,7 @@ extension ViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
         }
         
     }
+    
 }
 //NSString *dateString = [NSString, stringWithFormat;@"%li-%li", (long)start.month, (long)start.day];
 
@@ -432,4 +474,5 @@ extension ViewController {
         
         print("Showing Month: \(components.month)")
     }
+
 }
